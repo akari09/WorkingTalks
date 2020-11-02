@@ -6,6 +6,7 @@ public class CodeManager {
 	
 	public String randomNum(){
 		Random r = new Random();
+		System.out.println("randomNum IN Test");
 		String randomNum = "" + r.nextInt(10000);
 		if(randomNum.length() != 5){
 			int addNum = 5 - randomNum.length();
@@ -15,6 +16,7 @@ public class CodeManager {
 				}
 			}
 		}
+		System.out.println("randomNum Test : " + randomNum);
 		return randomNum;
 	}
 

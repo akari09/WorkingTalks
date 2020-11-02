@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<script src="js/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap_cerulean.css">
     <!-- Custom scripts for all pages-->
     <script src="custom-js/user-script.js"></script>
     
@@ -34,13 +35,13 @@ $(function() {
 <body>
 	<div class="signin-wrap">
 		<div class="signinBox">
-			<form action="login" method="post" onsubmit="return login_submit();" style="text-align: center; border-style: solid; width: 400px; height: 300px; vertical-align: middle; margin: auto;">
-					<label class="login-title">Working Talks</label><br>
-					<input type="text" name="user_id" id="login_id" placeholder="ID (半角英数字 6~14桁)"><br>
-					<input type="password" name="user_pw" id="login_pw" placeholder="PW (半角英数字·記号 8~14桁)"><br>
+			<form action="login" method="post" onsubmit="return login_submit();" style="text-align: center; width: 400px; height: 300px; vertical-align: middle; margin: auto;">
+					<label class="login-title"><h1>Working Talks</h1></label><br>
+					<input class="form-control" type="text" name="user_id" id="login_id" placeholder="ID (半角英数字 6~14桁)"><br>
+					<input class="form-control" type="password" name="user_pw" id="login_pw" placeholder="PW (半角英数字·記号 8~14桁)"><br>
 		
-					<input type="submit" value="ログイン"><br>
-					<input type="button" class="signup" value="会員登録">
+					<input class="btn btn-primary btn-lg" type="submit" value="ログイン">
+					<input class="signup btn btn-primary btn-lg" type="button" value="会員登録">
 			</form>
 		</div>
 	</div>
@@ -52,41 +53,41 @@ $(function() {
 				<tr>
 					<td><label>お名前(カナ)*</label></td>
 					<td>
-						<input type="text" name="user_name" id="user_name" placeholder="全角漢字・カタカナ">
+						<input class="form-control" type="text" name="user_name" id="user_name" placeholder="全角漢字・カタカナ">
 					</td>
 				</tr>
 				<tr>
 					<td><label>ID*</label></td>
-					<td><input type="text" name="user_id" id="user_id" placeholder="半角英数字6～14桁"></td>
+					<td><input class="form-control" type="text" name="user_id" id="user_id" placeholder="半角英数字6～14桁"></td>
 				</tr>
 				<tr>
 					<td><label>PW*</label></td>
-					<td><input type="text" name="user_pw" id="user_pw" placeholder="半角英数字・記号8～14桁"></td>
+					<td><input class="form-control" type="password" name="user_pw" id="user_pw" placeholder="半角英数字・記号8～14桁"></td>
 				</tr>
 				<tr>
 					<td><label>PW 再確認*</label></td>
-					<td><input type="text" name="user_pw2" id="user_pw2"></td>
+					<td><input class="form-control" type="password" name="user_pw2" id="user_pw2"></td>
 				</tr>
 				<tr>
 					<td><label>会社名*</label></td>
-					<td><input type="text" name="user_company" id="user_company"></td>
+					<td><input class="form-control" type="text" name="user_company" id="user_company"></td>
 				</tr>
 				<tr>
 					<td><label>部署</label></td>
-					<td><input type="text" name="user_depart" id="user_depart"></td>
+					<td><input class="form-control" type="text" name="user_depart" id="user_depart"></td>
 				</tr>
 				<tr>
 					<td><label>職級</label></td>
-					<td><input type="text" name="user_position" id="user_position"></td>
+					<td><input class="form-control" type="text" name="user_position" id="user_position"></td>
 				</tr>
 				<tr>
 					<td><label>メール*</label></td>
-					<td><input type="text" name="mail_addr" id="mail_addr"></td>
+					<td><input class="form-control" type="text" name="mail_addr" id="mail_addr"></td>
 				</tr>
 			 </table>
-			 <input type="submit" value="登録">
+			 <input class="btn btn-primary" type="submit" value="登録">
+			<input class="signup-overlayCancelBtn btn btn-primary" type="button" value="キャンセル" onclick="JoinExit()">
 			</form>
-			<input type="button" class="signup-overlayCancelBtn" value="キャンセル" onclick="JoinExit()">
 			
 		</div>
 	</div>

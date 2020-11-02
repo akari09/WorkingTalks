@@ -67,7 +67,7 @@ $(document).ready(function(){
 								<td><input class="form-control" type="text" name="mail_addr" id="mail_addr"></td>
 							</tr>
 						</table>
-						<input class="btn btn-primary"　type="submit" value="情報修正" onclick="return check_info()">
+						<input class="btn btn-primary" type="submit" value="情報修正" onclick="return check_info()">
 					</form>
 				</div>
 				

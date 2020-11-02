@@ -24,7 +24,7 @@ import com.my.wkts.vo.MemberVO;
 public class MemberController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-	private static CodeManager cdmgr;
+	private CodeManager cdmgr = new CodeManager();
 	
 	@Autowired
 	MemberDAO mDao;

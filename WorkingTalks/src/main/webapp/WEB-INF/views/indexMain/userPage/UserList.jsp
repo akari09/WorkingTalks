@@ -18,7 +18,7 @@ $(document).ready(function(){
 		data: {user_cd : userCode},
 		type: "POST",
 		success : function(result){
-			alert("목록 불러오기 성공");
+			//alert("목록 불러오기 성공");
 			displayList(result);
 		},
 		error : function(){

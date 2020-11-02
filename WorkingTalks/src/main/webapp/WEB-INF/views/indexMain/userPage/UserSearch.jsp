@@ -16,7 +16,7 @@
 		
 			<div class="usersearch_contents">
 			<br>
-					<label>検索条件</label>
+					<label><h3>検索条件</h3></label>
 					<form action="usersearch" method="post">
 						<table class="usersearch_contents_tbl table table-hover">
 							<thead>
@@ -26,8 +26,10 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td><input type="submit" value="検索"></td>
-									<td><input type="button" value="レセット" onclick="reset()"></td>
+									<td>
+										<input class="btn btn-outline-primary" type="submit" value="検索">
+										<input class="btn btn-outline-primary" type="button" value="レセット" onclick="reset()">
+									</td>
 								</tr>
 							</tbody>
 						</table>

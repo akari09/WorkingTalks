@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/wkts"
+  to = "/"
   status = 200

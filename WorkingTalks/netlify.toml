@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "http://192.168.1.69:8888/wkts/"
+  to = "/wkts"
   status = 200

@@ -28,7 +28,7 @@
 								<tr>
 									<td>
 										<input class="btn btn-outline-primary" type="submit" value="検索">
-										<input class="btn btn-outline-primary" type="button" value="レセット" onclick="reset()">
+										<input class="btn btn-outline-primary" type="button" value="リセット" onclick="reset()">
 									</td>
 								</tr>
 							</tbody>

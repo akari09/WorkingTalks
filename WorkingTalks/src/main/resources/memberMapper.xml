@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.my.wkts.dao.MemberMapper">
+
+	<select parameterType="string" id="isId" resultType="MemberVO">
+		select * from A01USRINFO where user_id = #{user_id}
+	</select>
+	
+	<select parameterType="string" id="getMemberList" resultType="MemberListVO">
+		select * from B01USRLIST where user_cd = #{user_cd}
+	</select>
+	
+	<!-- 会員登録 -->
+	<insert id="insertCustomer" parameterType="MemberVO">
+		insert into A01USRINFO (user_cd, user_id, user_pw, user_name, user_company, user_depart, user_position, mail_addr) 
+		values (#{user_cd}, #{user_id}, #{user_pw}, #{user_name}, #{user_company}, #{user_depart}, #{user_position}, #{mail_addr}) 
+	</insert>
+	
+	<!-- ID検索 -->
+	<select id="getCustomer" parameterType="String" resultType="MemberVO">
+		select * from A01USRINFO where user_id = #{searchId}
+	</select>
+	
+	<!-- 会員情報修正 -->
+	<update id="infoUpdate" parameterType="MemberVO">
+		update 
+			A01USRINFO 
+		set 
+			user_pw = #{user_pw}
+			, user_company = #{user_company}
+			, user_depart = #{user_depart}
+			, user_position = #{user_position}
+			, mail_addr = #{mail_addr}		
+		where 
+			user_id like #{user_id}
+	</update>
+	
+	<!-- 会員検索結果 -->
+	<select id="usersearch" parameterType="String" resultType="MemberVO">
+		select * from A01USRINFO where user_name like '%'||#{searchText}||'%' 
+		or user_id like '%'||#{searchText}||'%'
+		or user_company like '%'||#{searchText}||'%'
+		or user_depart like '%'||#{searchText}||'%'
+		or user_position like '%'||#{searchText}||'%'
+		or mail_addr like '%'||#{searchText}||'%'
+	</select>
+
+	<!-- コード重複確認 -->
+	<select id="isNum" parameterType="String" resultType="MemberVO">
+		select * from A01USRINFO where user_cd = #{randomNum}
+	</select>
+
+</mapper>

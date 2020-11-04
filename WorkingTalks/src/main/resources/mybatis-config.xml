@@ -6,8 +6,11 @@
 	<typeAliases>
 		<typeAlias type="com.my.wkts.vo.MemberVO" alias="MemberVO" />
 		<typeAlias type="com.my.wkts.vo.MemberListVO" alias="MemberListVO" />
+		<typeAlias type="com.my.wkts.vo.ChattingListVO" alias="ChattingListVO" />
+		<typeAlias type="com.my.wkts.vo.ChattingRoomVO" alias="ChattingRoomVO" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="memberMapper.xml" />
+		<mapper resource="chattingMapper.xml" />
 	</mappers>
 </configuration>

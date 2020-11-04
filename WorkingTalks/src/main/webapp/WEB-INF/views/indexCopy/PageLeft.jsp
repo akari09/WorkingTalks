@@ -46,6 +46,9 @@ $(document).ready(function(){
 			<div class="chat-menu">
 				<a href="?pageChange=chatPage/ChattingList.jsp"><label>チャット</label></a><br>
 			</div>
+			<div class="chatroom-menu">
+				<a href="?pageChange=chatPage/ChattingRoom.jsp"><label>チャットRoom Test</label></a><br>
+			</div>
 		</div>
 
 

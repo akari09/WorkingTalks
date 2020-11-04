@@ -25,6 +25,14 @@ public class ChattingController {
 		
 		return clistVo;
 	}
-
 	
+	@ResponseBody
+	@RequestMapping(value = "/chatstart", method = RequestMethod.POST)
+	public String startApp() {
+		
+		System.out.println("채팅 서버 접속 메소드 테스트");
+		
+		return "/";
+	}
+
 }
